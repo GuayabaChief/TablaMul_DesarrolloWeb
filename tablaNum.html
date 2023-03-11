@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Tabla de Multiplicar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/plantillaEjercicios.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1> Ingresa un numero para saber sus tablas de multiplicar</h1>
+            <input type="text" id="numero" placeholder="Ingresa aqui tu número">
+            <br>
+            <input type="button" value="Buscar su tabla" onclick="generarTabla()">
+        </div>
+        <div class="container" id="resultado">
+            
+        </div>
+        <footer class="footer">
+             <table>
+                <tr>
+                    <td>
+                        <p style="color: white; text-align: left; font-size: 14;">
+                            Sitio creado por Gerardo Su&aacute;rez Santos <br>
+                            Derechos reservados 2023 &reg;
+                        </p>
+                    </td>
+                    <td>
+                        <a href="http://www.escom.ipn.mx/"><img src="assets/img/logo.png" alt="Logo IPN y ESCOM" style="width: 50%; height: 50%"/><a/>
+                    </td>
+                    <td>
+                        <p style="color: white; text-align: left; font-size: 14;">
+                            ESCOM IPN, Unidad Profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, 07320 Ciudad de México, CDMX
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </footer>
+    </body>
+</html>
+<script type="text/javascript">
+    function generarTabla(){
+        var num = document.getElementById("numero").value;
+        for (var i=1; i<=10; i++){
+            document.write(num + "x" + i + "=" + (num*i) +"<br>");
+        }
+        document.write('<br><input type="button" value="Volver" onclick="location.reload()">');
+    }
+</script>
